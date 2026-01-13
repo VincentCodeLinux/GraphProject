@@ -29,6 +29,7 @@ class NetworkGraph:
                 if self.dfs(neighborpc, target, alrvisited):
                     return True
 
+
         return False
 
 network = NetworkGraph()
@@ -37,7 +38,14 @@ network.add_connection("PC1", "PC2")
 network.add_connection("PC2", "PC3")
 network.add_connection("PC3", "PC4")
 
-print(network.is_connected("PC1", "PC4"))
-print(network.is_connected("PC1", "PC5"))
+if network.is_connected("PC1", "PC4"):
+    print("PC1 is connected to PC4")
+else:
+    print("PC1 is NOT connected to PC4")
+
+if network.is_connected("PC1", "PC5"):
+    print("PC1 is connected to PC5")
+else:
+    print("PC1 is NOT connected to PC5")
 
 
